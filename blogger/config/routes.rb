@@ -1,4 +1,9 @@
 Blogger::Application.routes.draw do
+  get "users/index"
+  get "users/new"
+  get "users/show"
+  get "users/update"
+  get "users/delete"
   get "posts/new"
   get "posts/show"
   get "posts/update"
