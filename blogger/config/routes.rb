@@ -1,5 +1,6 @@
 Blogger::Application.routes.draw do
-  get "users/index"
+  devise_for :users
+  root 'users#index'
   get "users/new"
   get "users/show"
   get "users/update"
