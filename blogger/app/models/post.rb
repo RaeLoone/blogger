@@ -1,3 +1,5 @@
 class Post < ActiveRecord::Base
-	belong_to :users
+	belongs_to :user
+
+	# attr_accessible :title, :description, :image, :user_id
 end

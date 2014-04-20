@@ -1,0 +1,19 @@
+<%= form_for (@post) do |f| %>
+
+<% if @post.errors.any? %>
+  <%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:<br>
+  <% @post.errors.full_messages.each do |msg| %>
+    <%= msg %><br>
+  <% end %>
+<% end %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+    <%= f.label :description %>
+    <%= f.text_field :description %><br>
+    <%= f.label :image %>
+    <%= f.text_field :image %><br>
+    <%= f.hidden_field :user_id, :value => current_user.id%>
+    <%= f.submit %>
+
+<% end %>
